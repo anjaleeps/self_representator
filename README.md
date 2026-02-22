@@ -4,7 +4,7 @@ emoji: 🤖
 colorFrom: blue
 colorTo: indigo
 sdk: gradio
-app_file: chat.py
+app_file: app.py
 python_version: "3.12"
 pinned: true
 ---
@@ -27,7 +27,7 @@ Key code
 - `self_representator.py` – Orchestrates ingestion (`IngestionPipeline`), indexing (`Indexer`), and querying (`QueryEngine`).
 - `data_loaders.py` – Source-specific loaders/parsers for GitHub, Medium, and local files.
 - `models.py` – Pydantic models for typed API responses.
-- `chat.py` – Gradio entrypoint; starts ingestion and launches the chat UI.
+- `app.py` – Gradio entrypoint; starts ingestion and launches the chat UI.
 
 Environment
 -----------
@@ -42,7 +42,7 @@ Run it
 ------
 Start the Gradio chat (ingestion runs on startup):
 ```bash
-python chat.py
+python app.py
 ```
 This launches a browser UI titled “<USER_FULL_NAME> Bot” that answers questions using the indexed context.
 
@@ -50,4 +50,4 @@ Notes
 -----
 - Chroma is persisted to the `chromadb/` directory by default.
 - Query refinement happens before retrieval; retrieval logs the scored context chunks.
-- Update the knowledge base anytime by rerunning `python chat.py` (fresh ingestion) or calling `SelfRepresentator.update_knowledge()` in code.
+- Update the knowledge base anytime by rerunning `python app.py` (fresh ingestion) or calling `SelfRepresentator.update_knowledge()` in code.
