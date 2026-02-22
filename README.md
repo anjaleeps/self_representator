@@ -1,3 +1,14 @@
+---
+title: Self Representator
+emoji: 🤖
+colorFrom: blue
+colorTo: indigo
+sdk: gradio
+app_file: chat.py
+python_version: "3.12"
+pinned: true
+---
+
 Self Representator
 ==================
 
