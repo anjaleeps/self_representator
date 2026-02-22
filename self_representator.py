@@ -186,7 +186,7 @@ class SelfRepresentator:
         return OpenAIEmbedding(model=os.getenv("EMBED_MODEL"), api_key=os.getenv("OPENAI_API_KEY"))
 
     def _initialize_llm_client(self):
-        return OpenAI(base_url=os.getenv("GROQ_BASE_URL"), api_key=os.getenv("GROQ_API_KEY"))    
+        return OpenAI(base_url=os.getenv("LLM_BASE_URL"), api_key=os.getenv("LLM_API_KEY"))    
 
 
 if __name__ == "__main__":
